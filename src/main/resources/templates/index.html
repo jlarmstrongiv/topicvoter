@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <title>Topic Voter Application</title>
 </head>
 <body>
-
+<h1>Welcome to the Topic Voter!</h1>
+<ul>
+    <!--<li th:each="topic : ${topics}" th:text="${topic.title} + ' : ' + ${topic.description}">-->
+    <!--</li>-->
+    <li th:each="topic : ${topics}">
+        <p th:text="${topic.title}"></p>
+        <p th:text="${topic.description}"></p>
+    </li>
+</ul>
 </body>
 </html>
